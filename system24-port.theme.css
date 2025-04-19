@@ -280,6 +280,7 @@ body {
     transition: margin-left var(--sidebar-transition);
 }
 
+
 /* Channel list and user panel container */
 .sidebarList_c48ade,
 .panels_c48ade {
@@ -287,6 +288,27 @@ body {
     width: 100%;
     background: var(--bg-4);
     flex-shrink: 0;
+}
+
+/* Content area */
+.content_a6e57d {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Show everything on hover */
+.sidebar_c48ade:hover {
+    margin-left: calc(var(--server-list-width) + var(--gap));
+}
+
+/* Remove duplicate properties from sidebarList_c48ade */
+.sidebarList_c48ade {
+    position: relative;
+    width: 100%;
+    min-width: var(--channel-sidebar-width);
+    background: var(--bg-4);
+    flex-shrink: 0;
+    resize: none !important;
 }
 
 /* "messages" and "members" and "nav" need a bit of space so that the word
