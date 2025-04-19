@@ -1,6 +1,6 @@
 /**
- * @name system24 (refresh kanagawa) Catppuccin Frappe
- * @description a tui-style discord refresh theme with Catppuccin Frappe colors.
+ * @name system24 Kompact Catppuccin Frappe
+ * @description a tui-style discord refresh theme with Catppuccin Frappe colors. attempting kompact
  * @author Halides (recolor by MTeaHead)
  * @version 2.0.1
  */
@@ -17,7 +17,7 @@ body {
   font-weight: 300; /* UI font weight. */
 
   /* Sizes */
-  --gap: 16px; /* spacing between panels */
+  --gap: 12px; /* spacing between panels */
   --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
   --panel-roundness: 0px; /* roundness of panels */
 
@@ -66,8 +66,8 @@ body {
   --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
 
   /* Background Image Options */
-  --background-image: off; /* turn on to use a background image */
-  --background-image-url: url(''); /* url of the background image */
+  --background-image: on; /* turn on to use a background image */
+  --background-image-url: url('https://github.com/MTeaHead/system24-port/blob/master/Backgrounds/wallpaper3.jpg?raw=true'); /* url of the background image */
 
   /* Transparency/Blur Options
    * NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. 
@@ -92,6 +92,12 @@ body {
 
   /* Other Options */
   --small-user-panel: on; /* on/off for old discord user panel */
+
+
+      /* Simplified sidebar variables - remove redundant ones */
+    --server-list-width: 72px;
+    --channel-sidebar-width: 240px;
+    --sidebar-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Color Options */
@@ -256,6 +262,61 @@ body {
   z-index: 1000;
   transition: color 0.2s ease;
 }
+
+
+/* Simplified layout components */
+.base_c48ade {
+    position: relative;
+    display: flex;
+    margin-left: calc(-72px - var(--gap));
+    transition: margin-left var(--sidebar-transition);
+    width: calc(100% + var(--server-list-width));
+}
+
+/* Sidebar container that holds (Guild & Channels list + User bar?) */
+.sidebar_c48ade {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--server-list-width) 1fr;
+    min-width: calc(var(--server-list-width) + var(--channel-sidebar-width));
+    background: var(--bg-4);
+    overflow: hidden;
+    resize: none !important;
+    margin-left: 0;
+    transition: margin-left var(--sidebar-transition);
+}
+
+
+/* Channel list and user panel container */
+.sidebarList_c48ade,
+.panels_c48ade {
+    position: relative;
+    width: 100%;
+    background: var(--bg-4);
+    flex-shrink: 0;
+}
+
+/* Content area */
+.content_a6e57d {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Show everything on hover */
+.sidebar_c48ade:hover {
+    margin-left: calc(var(--server-list-width) + var(--gap));
+}
+
+/* Remove duplicate properties from sidebarList_c48ade */
+.sidebarList_c48ade {
+    position: relative;
+    width: 100%;
+    min-width: var(--channel-sidebar-width);
+    background: var(--bg-4);
+    flex-shrink: 0;
+    resize: none !important;
+}
+
 /* "messages" and "members" and "nav" need a bit of space so that the word
  * does not overlap text or graphics.
  */
