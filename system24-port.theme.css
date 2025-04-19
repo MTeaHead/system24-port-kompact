@@ -40,7 +40,7 @@ body {
    * off to disable completely 
    * default to use discord icon,
    */
-  --dms-icon: default; 
+  --dms-icon: off; 
   --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
   --dms-icon-svg-size: 190%; /* size of the svg (css mask-size) */
   --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
@@ -51,7 +51,7 @@ body {
    * image to use a background image, 
    * color to use a custom color/gradient 
    */
-  --dms-background: off; 
+  --dms-background: image; 
   --dms-background-image-url: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png'); /* url of background image */
   --dms-background-image-size: cover; /* size of background image (css background-size) */
 
