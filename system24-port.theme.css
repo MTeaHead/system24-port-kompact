@@ -256,6 +256,39 @@ body {
   z-index: 1000;
   transition: color 0.2s ease;
 }
+
+
+/* Simplified layout components */
+.base_c48ade {
+    position: relative;
+    display: flex;
+    margin-left: calc(-72px - var(--gap));
+    transition: margin-left var(--sidebar-transition);
+    width: calc(100% + var(--server-list-width));
+}
+
+/* Sidebar container that holds (Guild & Channels list + User bar?) */
+.sidebar_c48ade {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--server-list-width) 1fr;
+    min-width: calc(var(--server-list-width) + var(--channel-sidebar-width));
+    background: var(--bg-4);
+    overflow: hidden;
+    resize: none !important;
+    margin-left: 0;
+    transition: margin-left var(--sidebar-transition);
+}
+
+/* Channel list and user panel container */
+.sidebarList_c48ade,
+.panels_c48ade {
+    position: relative;
+    width: 100%;
+    background: var(--bg-4);
+    flex-shrink: 0;
+}
+
 /* "messages" and "members" and "nav" need a bit of space so that the word
  * does not overlap text or graphics.
  */
