@@ -6,9 +6,9 @@
  */
 
 /* import theme modules */
-@import url('https://shaedil.github.io/midnight.css');
+@import url('https://refact0r.github.io/system24/build/system24.css');
 /* gets rid of all rounded corners. remove if you want rounded corners.*/
-@import url('https://refact0r.github.io/system24/src/unrounding.css'); 
+/* @import url('https://refact0r.github.io/system24/src/unrounding.css'); */
 
 body {
   /* Font, change to '' for default discord font */
